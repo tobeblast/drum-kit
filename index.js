@@ -8,7 +8,7 @@ kits.forEach((kit) => {
   btnEl.style.backgroundImage = `url(./images/${kit}.jpg)`;
   containerEl.appendChild(btnEl);
   const audioEl = document.createElement("audio");
-  audioEl.src = `./sounds/${kit}.mp3`;
+  audioEl.src = `./sounds/${kit}-sound.mp3`;
   containerEl.appendChild(audioEl);
   btnEl.addEventListener("click", () => {
     audioEl.play();
