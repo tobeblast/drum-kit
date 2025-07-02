@@ -8,11 +8,11 @@ kits.forEach((kit) => {
   btnEl.style.backgroundImage = `url(./images/${kit}.jpg)`;
   containerEl.appendChild(btnEl);
   const audioEl = document.createElement("audio");
-  audioEl.src = `./sounds/${kit}-sound.mp3`;
+  audioEl.src = `./sounds/${kit}.mp3`;
   audioEl.type = `audio/mpeg`;
   containerEl.appendChild(audioEl);
   btnEl.addEventListener("click", () => {
-    audioEl.play();
+    audioEl.play().catch((err) => console.error(`${kit} play error:`, err));
   });
   window.addEventListener("keydown", (event) => {
     if (event.key === kit.slice(0, 1)) {
