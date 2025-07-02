@@ -9,6 +9,7 @@ kits.forEach((kit) => {
   containerEl.appendChild(btnEl);
   const audioEl = document.createElement("audio");
   audioEl.src = `./sounds/${kit}-sound.mp3`;
+  audioEl.type = `audio/mpeg`;
   containerEl.appendChild(audioEl);
   btnEl.addEventListener("click", () => {
     audioEl.play();
